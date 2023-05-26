@@ -8,16 +8,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Pricing {
+public class PaymentMethodDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Double total;
-    private Integer discount;
-    private Double deliveryFee;
-    private Integer deliveryDiscount;
+    private String cardHolder;
+    private Long cardNumber;
+    private Integer cvv2;
+    private Date exp;
+    private Long userId;
 }
